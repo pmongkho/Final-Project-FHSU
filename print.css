@@ -1,0 +1,9 @@
+@media print{
+    nav,.pic, header{
+        visibility: hidden;
+        display: none;
+      
+    }
+  
+
+}

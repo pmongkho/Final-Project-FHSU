@@ -1,63 +1,98 @@
-<!-- 
-	
-Please post the working URL for your final project homepage. 
-It should be in the following format:
-http://username.infprojects.fhsu.edu/final/final.html
-Selected Answer:	
-http://pemongkhonvilay.infprojects.fhsu.edu/final/final.html
-Correct Answer:	
-[None]
-Response Feedback:	
-UNIT C - FINAL (homepage 1st draft):
-Semantic markup tags 
-<header> ✘
-<main> ✓
-<nav> ✘
-<footer> ✘
-At least one image ✘
-Correct, unique, HTML5-valid title tags ✓
-linked to external CSS sheet (final.css) ✓
-element ID ✓
-CLASS selectors ✓
-Liquid layout, not full width ✘
-size in %, not px (unless <=10px) ✓
-text measurement in “em”s ✓
-use outer <div> to constrain content width ✘
-use left and right margins of auto for the outer
- <div> for centering content within <body></body> ✘
-Interactive navigation (unordered list styled with css using pseudo states) ✘
-WC3 code checker results:
-HTML
-CSS is clean… thank you!
-This form page will go nicely with whatever ends up being your site design.
-Please create a home page and resubmit. -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Login" />
+
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Login</title>
+        <link rel="stylesheet" media="print" href="print.css">
+
 		<link rel="stylesheet" href="final.css" />
 		<script
 			src="https://kit.fontawesome.com/240691d8c2.js"
 			crossorigin="anonymous"
 		></script>
+
+		<style>
+			.signuppage {
+				background: #7f00ff; /* fallback for old browsers */
+				background: -webkit-linear-gradient(
+					to right,
+					#e100ff,
+					#7f00ff
+				); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(
+					to right,
+					#e100ff,
+					#7f00ff
+				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+				height: 100vh;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.form {
+				color: #000000;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.signupform {
+				border-radius: 20px;
+				background-color: rgba(255, 255, 255, 0.405);
+				height: auto;
+				width: 400px;
+			}
+
+			.firstlast {
+				display: flex;
+				align-items: center;
+			}
+			.gender {
+				display: flex;
+				width: 100%;
+				flex-wrap: wrap;
+				justify-content: start;
+				align-items: center;
+				color: rgba(0, 0, 0, 0.815);
+			}
+
+			.gender input[type="radio"] {
+				margin: 10px;
+			}
+			@media only screen and (max-width: 680px) {
+				.signupform {
+					background-color: rgba(255, 255, 255, 0);
+					border-radius: 0px;
+					width: 100%;
+				}
+			}
+			@media only screen and (min-width: 1024px) {
+				.signupform {
+					height: 60vh;
+					width: 100vw;
+				}
+			}
+		</style>
 	</head>
 
 	<body>
 		<main id="loginmain">
 			<div class="main__container">
+				<div class="logo">
+					<img src="AZULA TECH Logo.png" alt="" />
+				</div>
+				<div class="intro">Welcome to AzulaCorp. Meet some people.</div>
 				<div class="welcome">
 					<i class="fas fa-user"></i>
 				</div>
 
 				<div class="container__login">
 					<div class="loginform">
-						<form
-							action="C:\Users\Pmong\OneDrive\Desktop\FHSU\FALL 2021\INF 250 Beginning Web Development\final\finalhome.html"
-						>
+						<form action="finalhome.html">
 							<div class="usernameinput">
 								<label for="uname"><b>Username</b></label>
 								<input
@@ -86,6 +121,39 @@ Please create a home page and resubmit. -->
 							</label>
 							<div class="forgotpw"></div>
 							<span class="psw">Forgot <a href="#">password?</a></span>
+						</form>
+					</div>
+				</div>
+				<p style="font-size: 2em">
+					<a href="#signup">Dont have an Account?</a>
+				</p>
+				<footer>© Phongsavanh Mongkhonvilay 2021</footer>
+			</div>
+			<div id="signup" class="signuppage">
+				<div class="form">
+					<div class="signupform">
+						<form action="final.html">
+							<p style="font-size: 3em">sign up</p>
+							<div class="firstlast">
+								<input type="text" placeholder="firstname" />
+								<input type="text" placeholder="lastname" />
+							</div>
+
+							<input class="email" type="email" placeholder="email" />
+
+							<input class="password" type="password" placeholder="password" />
+
+							<input class="birthday" type="date" placeholder="birthday" />
+							<div>
+								<label class="gender"><input type="radio" />male</label>
+							</div>
+							<label class="gender"><input type="radio" />female</label>
+							<label class="gender"><input type="radio" />gender X</label>
+							<label class="gender"
+								><input type="radio" checked />does not wish to answer</label
+							>
+
+							<button class="loginbutton" type="submit">Sign up</button>
 						</form>
 					</div>
 				</div>
